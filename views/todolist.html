@@ -1,0 +1,13 @@
+{% extends "main.html" %}
+{% block title %}
+<title>TodoList</title>
+{% endblock %}
+{% block content %}
+<ul>
+{% for result in results %}
+    {% if not result.done %}
+        <li>{{result.description}}</li>
+    {% endif %}
+{% endfor %}
+</ul>
+{% endblock %}
